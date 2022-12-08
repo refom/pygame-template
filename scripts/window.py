@@ -31,7 +31,7 @@ class Window:
                 pygame.quit()
                 sys.exit()
 
-    def render(self):
+    def draw(self):
         width = int(self.display.get_width() * self.scale_ratio[0])
         height = int(self.display.get_height() * self.scale_ratio[1])
         self.screen.blit(pygame.transform.scale(self.display, (width, height)), (0, 0))

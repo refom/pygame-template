@@ -1,17 +1,15 @@
 
 from scripts.window import Window
+from scripts.camera import Camera
 
-class Game:
-    def __init__(self):
-        self.window = Window()
+window = Window()
+camera = Camera()
 
-    def update(self):
-        # anything on top
-        self.window.input()
-        self.window.render()
+while True:
+    camera.update()
+    camera.custom_draw(window.display)
 
-    def run(self):
-        while True:
-            self.update()
+    window.input()
+    window.draw()
 
-Game().run()
+
